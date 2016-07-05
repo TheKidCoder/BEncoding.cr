@@ -10,7 +10,7 @@ Add this to your application's `shard.yml`:
 ```yaml
 dependencies:
   BEncoding.cr:
-    github: [your-github-name]/BEncoding.cr
+    github: TheKidCoder/BEncoding.cr
 ```
 
 
@@ -30,7 +30,7 @@ TODO: Write development instructions here
 
 ## Contributing
 
-1. Fork it ( https://github.com/[your-github-name]/BEncoding.cr/fork )
+1. Fork it ( https://github.com/TheKidCoder/BEncoding.cr/fork )
 2. Create your feature branch (git checkout -b my-new-feature)
 3. Commit your changes (git commit -am 'Add some feature')
 4. Push to the branch (git push origin my-new-feature)
@@ -38,4 +38,4 @@ TODO: Write development instructions here
 
 ## Contributors
 
-- [[your-github-name]](https://github.com/[your-github-name]) Christopher Ostrowski - creator, maintainer
+- [TheKidCoder](https://github.com/TheKidCoder) Christopher Ostrowski - creator, maintainer

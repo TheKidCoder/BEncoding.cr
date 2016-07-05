@@ -1,2 +1,2 @@
 require "spec"
-require "../src/BEncoding.cr"
+require "../src/BEncoding"
