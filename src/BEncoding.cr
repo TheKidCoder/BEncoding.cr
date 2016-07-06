@@ -1,9 +1,10 @@
+require "colorize"
 require "./BEncoding/*"
 
 module BEncoding
   def self.decode_file(path : String)
-    if File.exists?(path)
-      BEncoding::Decode.new(path)
+    if File.file?(path)
+      BEncoding::Decode.decode(path)
     else
       raise ArgumentError.new("File Not Found: #{path}")
     end
@@ -12,5 +13,5 @@ module BEncoding
 end
 
 
-BEncoding.decode_file("nope.torrent")
+BEncoding.decode_file("spec/CentOS-7-x86_64-Minimal-1511.torrent")
 
