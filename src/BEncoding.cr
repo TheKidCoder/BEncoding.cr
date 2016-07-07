@@ -13,5 +13,5 @@ module BEncoding
 end
 
 
-BEncoding.decode_file("spec/CentOS-7-x86_64-Minimal-1511.torrent")
+BEncoding.decode_file("spec/test.torrent")
 

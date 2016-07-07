@@ -36,10 +36,10 @@ module BEncoding
   end
 
   class Decode
-    alias ElementMember = String | Int32 | UInt8 | Hash(String, ElementMember) | Nil
+    alias ElementMember   = String | Int32 | UInt8 | Hash(String, ElementMember) | Nil
     alias DecodedElements = Array(ElementMember)
 
-    @reader : File
+    @reader   : File
     @elements : DecodedElements
 
     def self.decode(file_path : String)
@@ -47,7 +47,7 @@ module BEncoding
     end
 
     def initialize(@file_path : String)
-      @reader = File.open(@file_path)
+      @reader   = File.open(@file_path)
       @elements = DecodedElements.new
     end
 
@@ -92,7 +92,9 @@ module BEncoding
       byte_iterator.each do |byte|
         break if byte == DECODE_BYTES[:dictionary_end]
         key = decode_bytea(byte_iterator)
+        puts "Key: #{key}"
         obj = decode_byte(byte, byte_iterator)
+        puts obj
         # hash[key] = obj
       end
       return hash
@@ -112,7 +114,9 @@ module BEncoding
 
     def decode_number(byte_iterator : ByteIterator)
       puts "--- Starting Number ---".colorize(:red)
-      decode_bytea(byte_iterator).to_i
+      byte_array = decode_bytea(byte_iterator)
+      puts byte_array
+      byte_array.to_i
     end
       
   end
